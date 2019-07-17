@@ -10,9 +10,9 @@ Simple command parser for Arduino
 
 #### Examples:
 ```
-SET param1 param2 param3 [1,2,3,4,5,6,7];
-ACK param1 param2 param3 [1,2,3,4,5,6,7];
-SET param1 param2 param3 [1,2,3,4,5,6,7];
+SET param1 param2 [1,2,3,4,5,6,7,ff,aa,12,1,34];
+ACK param1 param2;
+SET param1 param2 param3;
 RESET;
 SET param1;
 SET [1,3,ff,ee];
