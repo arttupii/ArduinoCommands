@@ -18,6 +18,7 @@ SET param1;
 SET [1,3,ff,ee];
 #Comment line
 SET Hi\ world; 
+SET param\\1; 
 ```
 
 ## Test code
