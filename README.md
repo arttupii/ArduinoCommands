@@ -1,7 +1,7 @@
 Simple command parser for Arduino
 
 #### Features:
- - Max length of the parameters: 10byte
+ - Max length of the parameter: 10byte
  - Max length of the command name: 10byte
  - Max count of the parameters: 3
  - Max binary data size: 240byte
