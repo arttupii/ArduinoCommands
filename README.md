@@ -1,6 +1,6 @@
 Simple command parser for Arduino
 
-Features:
+#### Features:
  - Max length of the parameters: 10byte
  - Max length of the command name: 10byte
  - Max count of the parameters: 3
@@ -8,7 +8,8 @@ Features:
  - Sender&Receiver
  - General stream support
 
-Examples;
+#### Examples:
+```
 SET param1 param2 param3 [1,2,3,4,5,6,7];
 ACK param1 param2 param3 [1,2,3,4,5,6,7];
 SET param1 param2 param3 [1,2,3,4,5,6,7];
@@ -17,6 +18,7 @@ SET param1;
 SET [1,3,ff,ee];
 #Comment line
 SET Hi\ world; 
+```
 
 ## Test code
 ```c++
@@ -60,8 +62,9 @@ void loop() {
 }
 ```
 ### Output
--->Send set command: "SET param1 param2 param3 [1,2,3,4,5,6,7];"
 
+Send set command: "SET param1 param2 param3 [1,2,3,4,5,6,7];"
+```
 15:16:00.956 -> #RECEIVED SET:
 15:16:00.956 -> SET
 15:16:00.956 -> Params:
@@ -70,10 +73,13 @@ void loop() {
 15:16:00.989 -> param3
 15:16:00.989 -> Binary:
 15:16:00.989 -> 1,2,3,4,5,6,7,
-
--->Send get command: "GET;"
+```
+Send get command: "GET;"
+```
 15:20:39.505 -> #RECEIVED GET:
 15:20:39.505 -> ACK [48,45,4C,4C,4F];
-
--->Send unkown command: "BLAA"
+```
+Send unkown command: "BLAA;"
+```
 15:22:33.488 -> NACK INVALID\ COMMAND;
+```
