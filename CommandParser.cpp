@@ -56,7 +56,7 @@ void Commands::send(const char *reply, const char *p1, const char *p2, const cha
     stream->print(" ");
     sendParameter(p3);
   }
-  if (data) {
+  if (data!=NULL && length>0) {
     stream->print(" [");
     for (int i = 0; i < length; i++) {
       if (i != 0) {
@@ -76,14 +76,14 @@ void Commands::handleInputCommands(void (cb)(const char* cmdName, const char*p1,
   }
 }
   void Commands::sendParameter(const char*p) {
-    for(int i=0;i<strlen(p)+1;i++){
+    for(int i=0;i<strlen(p);i++){
       if(p[i]==' '){
         stream->print("\\");
       }
       if(p[i]=='\\'){
         stream->print("\\");
       }
-      stream->print(p[i]);
+      stream->write(p[i]);
     }
   }
 void Commands::parse(char a) {
