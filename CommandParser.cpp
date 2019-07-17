@@ -83,7 +83,7 @@ void Commands::handleInputCommands(void (cb)(const char* cmdName, const char*p1,
       if(p[i]=='\\'){
         stream->print("\\");
       }
-      stream->write(p[i]);
+      stream->print(p[i]);
     }
   }
 void Commands::parse(char a) {
