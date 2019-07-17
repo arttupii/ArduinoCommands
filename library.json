@@ -1,0 +1,25 @@
+{
+  "name": "EspNowAESBroadcast",
+  "version": "0.0.1",
+  "keywords": "command parser"
+  "description": "Command parser for Arduino.",
+  "examples": "examples/*/*.ino",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arttupii/ArduinoCommands"
+  },
+  "authors": [
+    {
+      "name": "arttupii",
+      "email": "arttupii@gmail.com",
+      "url": "https://github.com/arttupii/ArduinoCommands",
+      "maintainer": true
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": [
+    "esp32",
+    "espressif32",
+    "esp8266","arduino"
+  ]
+}
