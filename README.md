@@ -3,8 +3,8 @@ Simple command parser for Arduino
 See example project: https://github.com/arttupii/EspNowUsb
 
 #### Features:
- - Max length of the parameter: 10byte
- - Max length of the command name: 10byte
+ - Max length of the parameter: 15byte
+ - Max length of the command name: 15byte
  - Max count of the parameters: 3 (+binary data)
  - Max binary data size: 240byte
  - Sender&Receiver

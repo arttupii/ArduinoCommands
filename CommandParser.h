@@ -1,7 +1,7 @@
 #ifndef __COMMAND_PARSER_H_
 #define __COMMAND_PARSER_H_
 
-#define MAX_CMD_PARAM_LENGTH 10
+#define MAX_CMD_PARAM_LENGTH 15
 #define MAX_BINARY_PARAM_LENGTH 240
 
 #include <Stream.h>
