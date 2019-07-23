@@ -1,10 +1,12 @@
 #ifndef __COMMAND_PARSER_H_
 #define __COMMAND_PARSER_H_
 
-#define MAX_CMD_PARAM_LENGTH 15
+#define MAX_CMD_PARAM_LENGTH 20
 #define MAX_BINARY_PARAM_LENGTH 240
 
 #include <Stream.h>
+#include <math.h>
+
 class Commands {
   public:
     Commands();
@@ -21,6 +23,15 @@ class Commands {
     void send(const char *reply);
 
     void handleInputCommands(void (cb)(const char* cmdName, const char*p1, const char*p2, const char*p3, const unsigned char*binary, int size));
+
+    static unsigned long long sTolUint(const char*p) {
+      unsigned long long d=0;
+      int l=strlen(p);
+      for(int i=strlen(p)-1;i>=0;i--) {
+          d+=pow(10,l-i-1)*(p[i]-'0');
+      }
+      return d;
+    }
   private:
     void parse(char a);
     void sendParameter(const char*p);
