@@ -1,6 +1,6 @@
 #include "CommandParser.h"
 #include <Arduino.h>
-
+#include <safememcpy.h>
 
 Commands::Commands() {
   index = 0;
@@ -114,7 +114,7 @@ void Commands::parse(char a) {
     if (a == ' ' || a == '\t' || a == ';' && binaryIndex == 0) {
       buffer[index] = 0;
       if (paramIndex == 0) { //CMD NAME
-        memcpy(cmdName, buffer, sizeof(cmdName));
+        memcpyS(cmdName,sizeof(cmdName), buffer, sizeof(cmdName));
         cmdName[sizeof(cmdName) - 1] = 0;
         binaryIndex = 0;
         paramIndex++;
@@ -125,9 +125,9 @@ void Commands::parse(char a) {
         //Handle params
 
         switch (paramIndex) {
-          case 1: memcpy(param1, buffer, sizeof(param1)); param1[sizeof(param1) - 1] = 0; break;
-          case 2: memcpy(param2, buffer, sizeof(param2)); param2[sizeof(param2) - 1] = 0; break;
-          case 3: memcpy(param3, buffer, sizeof(param3)); param3[sizeof(param3) - 1] = 0; break;
+          case 1: memcpyS(param1,sizeof(param1), buffer, sizeof(param1)); param1[sizeof(param1) - 1] = 0; break;
+          case 2: memcpyS(param2,sizeof(param2), buffer, sizeof(param2)); param2[sizeof(param2) - 1] = 0; break;
+          case 3: memcpyS(param3,sizeof(param3), buffer, sizeof(param3)); param3[sizeof(param3) - 1] = 0; break;
           default: break;
         }
         paramIndex++;
