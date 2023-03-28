@@ -1,7 +1,7 @@
 {
   "name": "EspNowAESBroadcast",
   "version": "0.0.1",
-  "keywords": "command parser"
+  "keywords": "command parser",
   "description": "Command parser for Arduino.",
   "examples": "examples/*/*.ino",
   "repository": {
