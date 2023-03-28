@@ -6,7 +6,7 @@
   "examples": "examples/*/*.ino",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arttupii/ArduinoCommands"
+    "url": "https://github.com/JoostAB/ArduinoCommands"
   },
   "authors": [
     {
