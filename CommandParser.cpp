@@ -27,16 +27,16 @@ void Commands::send(const char *reply, const unsigned char *data, const int leng
 }
 
 void Commands::send(const char *reply, const char *p1, const char *p2, const char *p3){
-  send(reply, p1, p2, p3, NULL, NULL);
+  send(reply, p1, p2, p3, NULL, 0);
 }
 void Commands::send(const char *reply, const char *p1, const char *p2){
-  send(reply, p1, p2, NULL, NULL, NULL);
+  send(reply, p1, p2, NULL, NULL, 0);
 }
 void Commands::send(const char *reply, const char *p1){
-  send(reply, p1, NULL, NULL, NULL, NULL);
+  send(reply, p1, NULL, NULL, NULL, 0);
 }
 void Commands::send(const char *reply){
-  send(reply, NULL, NULL, NULL, NULL, NULL);
+  send(reply, NULL, NULL, NULL, NULL, 0);
 }
 
 
